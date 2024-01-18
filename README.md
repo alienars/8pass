@@ -3,7 +3,7 @@
   <br>
 </h1>
 <p float="left">
-  <img src="readme/screenshot.png" alt="RA8-SCRT" width="52%">
+  <img src="readme/screenshot.png" alt="RA8-SCRT" width="49%">
   <img src="readme/extension.png" alt="RA8-SCRT" width="48%">
 </p>
 <!-- <h1 style="flex">
