@@ -2,8 +2,9 @@
   <span>8PASS | RA8</span>
   <br>
   <br>
-  <img float="left" src="readme/screenshot.png" alt="RA8-SCRT" width="50%">
-  <img float="right" src="readme/extension.png" alt="RA8-SCRT" width="50%">
+  ![screenshot](readme/screenshot.png "screenshot") ![extension](readme/extension.png "extension")
+  <!-- <img float="left" src="readme/screenshot.png" alt="RA8-SCRT" width="50%">
+  <img float="right" src="readme/extension.png" alt="RA8-SCRT" width="50%"> -->
   <br>
 </h1>
 
