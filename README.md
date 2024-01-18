@@ -1,9 +1,9 @@
 <h1 align="center">
   <br>
-  <img src="readme/screenshot.png" alt="RA8-SCRT" width="100%">
-  <br>
-  <br>
   <span>8PASS | RA8</span>
+  <br>
+  <img src="readme/screenshot.png" alt="RA8-SCRT" width="50%">
+  <img src="readme/extension.png" alt="RA8-SCRT" width="50%">
   <br>
 </h1>
 
