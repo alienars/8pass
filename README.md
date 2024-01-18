@@ -1,10 +1,11 @@
 <h1 align="center">
   <span>8PASS | RA8</span>
   <br>
+</h1>
+<h1>
   <br>
-  ![screenshot](readme/screenshot.png "screenshot") ![extension](readme/extension.png "extension")
-  <!-- <img float="left" src="readme/screenshot.png" alt="RA8-SCRT" width="50%">
-  <img float="right" src="readme/extension.png" alt="RA8-SCRT" width="50%"> -->
+  <img float="left" src="readme/screenshot.png" alt="RA8-SCRT" width="50%">
+  <img float="right" src="readme/extension.png" alt="RA8-SCRT" width="50%">
   <br>
 </h1>
 
