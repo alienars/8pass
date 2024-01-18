@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="popup.css" rel="stylesheet" type="text/css">
+
+    <style>
+
+
+    </style>
+</head>
+  <body style="text-align:center;background-color: #343a40;">
+    <div class="container justify-content-between">
+        <nav class="navbar navbar-light" style="background-color: #1B1B1B;">
+            <a class="navbar-brand" href="#" style="margin: auto;">
+                <img src="img/logo1.gif" width="120" style="margin: auto;">
+            </a>
+        </nav>
+        <ul class="nav nav-tabs nav-justified nav-pills" id="myTab" role="tablist" style="border-radius: 0 0 20px 20px;overflow: hidden;">
+            <li class="nav-item" style="background-color: #F5F5F5;">
+                <a class="nav-link active" style="border-radius:0;border: 0;padding: 8px;color: #1B1B1B;font-weight: bold;" id="qr-tab" data-toggle="tab" href="#qr" role="tab" aria-controls="ip" aria-selected="false">QR Code</a>
+            </li>
+            <li class="nav-item" style="background-color: #F5F5F5;">
+                <a class="nav-link" style="border-radius:0;border: 0;padding: 8px;color: #1B1B1B;font-weight: bold;" id="gen-tab" data-toggle="tab" href="#gen" role="tab" aria-controls="enc" aria-selected="true">Password</a>
+            </li>
+            <li class="nav-item" style="background-color: #F5F5F5;">
+                <a class="nav-link" style="border-radius:0;border: 0;padding: 8px;color: #1B1B1B;font-weight: bold;" id="enc-tab" data-toggle="tab" href="#enc" role="tab" aria-controls="enc" aria-selected="true">Encryption</a>
+            </li>
+            <li class="nav-item" style="background-color: #F5F5F5;">
+                <a class="nav-link" style="border-radius:0;border: 0;padding: 8px;color: #1B1B1B;font-weight: bold;" id="dec-tab" data-toggle="tab" href="#dec" role="tab" aria-controls="dec" aria-selected="false">Decryption</a>
+            </li>
+            <li class="nav-item" style="background-color: #F5F5F5;">
+                <a class="nav-link" style="border-radius:0;border: 0;padding: 8px;color: #1B1B1B;font-weight: bold;" id="has-tab" data-toggle="tab" href="#has" role="tab" aria-controls="has" aria-selected="false">Hash</a>
+            </li>
+            <li class="nav-item" style="background-color: #F5F5F5;">
+                <a class="nav-link" style="border-radius:0;border: 0;padding: 8px;color: #1B1B1B;font-weight: bold;" id="ip-tab" data-toggle="tab" href="#ip" role="tab" aria-controls="ip" aria-selected="false">IP</a>
+            </li>
+        </ul>
+      <div class="tab-content" id="myTabContent" style="background-color: #343a40;">
+          <div class="tab-pane fade show active" id="qr" role="tabpanel" aria-labelledby="qr-tab">
+              <div style="width: 100%;padding: 25px;background-color: #343a40;height: 410px;">
+                  <div class="clearfix">
+                      <span class="badge badge-dark float-right text-primary" id="c9" style="cursor: pointer;">copy</span>
+                      <span class="badge badge-dark float-left"  data-toggle="tooltip" data-placement="right" title="Secure 58 Digit Key">Random 256-Bit Key</span>
+                  </div>
+                  <input type="text" style="margin-top:0px;margin-bottom:20px;background-color: #007BFF;border:0 solid transparent;color: #eeeeee;" class="form-control" id="barcode" placeholder="Text">
+                  <button type="button" class="btn btn-success" id="bcr" style="border-radius: 30px;padding: 6px 30px;"><img src="img/refresh-button.png" style="width: 80%;" /></button>
+                  <div class="flip-card" style="margin: auto;margin-top: 20px;">
+                      <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                              <div id="qrcode" style="width:240px; height:240px;border-radius: 10px;background-image: url(img/bar8.png);padding: 20px;"></div>
+                          </div>
+                          <div class="flip-card-back">
+                              <div style="width:240px; height:240px;border-radius: 10px;background-image: url(img/bar9.png);padding: 20px;"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div style="width: 100%;height: 28px;background-color: #343a40;">
+                  <a href="http://8pass.ra8.ir/" target="_blank">
+                      <span class="badge badge-pill badge-dark" style="background-color: #1B1B1B;"  data-toggle="tooltip" data-placement="top" title="8PASS.RA8.IR">8PASS</span>
+                  </a>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="gen" role="tabpanel" aria-labelledby="gen-tab">
+              <div style="width: 100%;padding: 25px;background-color: #343a40;">
+                  <div class="result">
+                      <div class="result__viewbox" id="result" style="display: none;">CLICK GENERATE</div>
+                      <div class="clearfix">
+                          <span class="badge badge-dark float-right text-primary" id="c10" style="cursor: pointer;">copy</span>
+                          <span class="badge badge-dark float-left"  data-toggle="tooltip" data-placement="right" title="Create Secure ,Random Password">Secure Password</span>
+                      </div>
+                      <input type="text" style="margin-top:0px;margin-bottom:20px;background-color: #007BFF;border:0 solid transparent;color: #eeeeee;" class="form-control" id="randpass" placeholder="Click Generate">
+                  </div>
+                  <div class="length range__slider" data-min="4" data-max="32">
+                      <div class="length__title field-title" data-length='0'>length:</div>
+                      <input id="slider" type="range" min="4" max="32" value="16" />
+                  </div>
+                  <div class="settings">
+                      <div class="setting">
+                          <input type="checkbox" id="uppercase" checked />
+                          <label for="uppercase">Uppercase</label>
+                      </div>
+                      <div class="setting">
+                          <input type="checkbox" id="lowercase" checked />
+                          <label for="lowercase">Lowercase</label>
+                      </div>
+                      <div class="setting">
+                          <input type="checkbox" id="number" checked />
+                          <label for="number">Numbers</label>
+                      </div>
+                      <div class="setting">
+                          <input type="checkbox" id="symbol" />
+                          <label for="symbol">Symbols</label>
+                      </div>
+                  </div>
+                  <button type="button" class="btn btn-success" id="generate" style="border-radius: 30px;padding: 6px 20px;">Generate</button>
+              </div>
+              <div style="width: 100%;height: 28px;background-color: #343a40;">
+                  <a href="http://8pass.ra8.ir/" target="_blank">
+                      <span class="badge badge-pill badge-dark" style="background-color: #1B1B1B;"  data-toggle="tooltip" data-placement="top" title="8PASS.RA8.IR">8PASS</span>
+                  </a>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="enc" role="tabpanel" aria-labelledby="enc-tab">
+              <div style="width: 100%;padding: 25px;background-color: #343a40;padding-bottom: 0;">
+                  <div class="clearfix">
+                      <span class="badge badge-dark float-right" id="c1" style="cursor: pointer;">copy</span>
+                      <span class="badge badge-dark float-left"  data-toggle="tooltip" data-placement="right" title="Advanced Encryption Standard">AES Algorithm</span>
+                  </div>
+                  <textarea style="height:200px;max-height: 400px;color:#eeeeee;background-color: #636e72;border:0;" class="form-control" id="txtoenc" rows="3" placeholder="Orginal Text"></textarea>
+                  <span class="badge badge-dark text-primary" style="margin-top:15px;cursor: pointer;" id="c2">copy</span>
+                  <div class="input-group mb-3" style="margin-bottom:20px;border:0 solid transparent;border-radius: 10px;">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1" style="background-color: #0066D3;border:0 solid transparent;"><img src="img/key.png" style="width: 100%;" /></span>
+                      </div>
+                      <input id="keyenc" type="text" style="background-color: #007BFF;border:0 solid transparent;color: #eeeeee;" class="form-control" placeholder="Key">
+                  </div>
+                  <button type="button" class="btn btn-success" id="btnenc" style="border-radius: 30px;padding: 6px 20px;">Encrypt</button>
+                  <span class="badge badge-dark btn-block" id="c3" style="margin-top: 15px;cursor: pointer;">copy</span>
+                  <textarea class="form-control" style="height:200px;max-height: 400px;color:#eeeeee;background-color: #636e72;border:0;" id="txteenc" rows="3" placeholder="Encrypted Text"></textarea>
+                  <div style="width: 100%;height: 28px;background-color: #343a40;">
+                      <a href="http://8pass.ra8.ir/" target="_blank">
+                          <span class="badge badge-pill badge-dark" style="background-color: #1B1B1B;"  data-toggle="tooltip" data-placement="top" title="8PASS.RA8.IR">8PASS</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="dec" role="tabpanel" aria-labelledby="dec-tab">
+              <div style="width: 100%;padding: 25px;background-color: #343a40;padding-bottom: 0;">
+                  <div class="clearfix">
+                      <span class="badge badge-dark float-right" id="c4" style="cursor: pointer;">copy</span>
+                      <span class="badge badge-dark float-left"  data-toggle="tooltip" data-placement="right" title="Advanced Encryption Standard">AES Algorithm</span>
+                  </div>
+                  <textarea style="height:200px;border:0;color:#eeeeee;background-color: #636e72;max-height: 400px;" class="form-control" id="txtedec" rows="3" placeholder="Encrypted Text"></textarea>
+                  <span class="badge badge-dark text-primary" style="margin-top:15px;cursor: pointer;" id="c5">copy</span>
+                  <div class="input-group mb-3" style="margin-top:0;margin-bottom:20px;border:0 solid transparent;border-radius: 10px;">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1" style="background-color: #0066D3;border:0 solid transparent;"><img src="img/key.png" style="width: 100%;" /></span>
+                      </div>
+                      <input id="keydec" type="text" style="background-color: #007BFF;border:0 solid transparent;color: #eeeeee;" class="form-control" placeholder="Key">
+                  </div>
+                  <button type="button" class="btn btn-success" id="btndec" style="border-radius: 30px;padding: 6px 20px;">Decrypt</button>
+                  <span class="badge badge-dark btn-block" id="c6" style="margin-top: 15px;cursor: pointer;">copy</span>
+                  <textarea class="form-control" style="height:200px;color:#eeeeee;background-color: #636e72;border:0;max-height: 400px;" id="txtodec" rows="3" placeholder="Orginal Text"></textarea>
+                  <div style="width: 100%;height: 28px;background-color: #343a40;">
+                      <a href="http://8pass.ra8.ir/" target="_blank">
+                          <span class="badge badge-pill badge-dark" style="background-color: #1B1B1B;"  data-toggle="tooltip" data-placement="top" title="8PASS.RA8.IR">8PASS</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="has" role="tabpanel" aria-labelledby="has-tab">
+              <div style="width: 100%;padding: 25px;background-color: #343a40;padding-bottom: 0;">
+                  <div class="clearfix">
+                      <span class="badge badge-dark float-right" id="c7" style="cursor: pointer;">copy</span>
+                      <span class="badge badge-dark float-left"  data-toggle="tooltip" data-placement="right" title="Secure Hash Algorithms">SHA Algorithm</span>
+                  </div>
+                  <textarea style="height:150px;max-height: 300px;color:#eeeeee;background-color: #636e72;border:0;margin-bottom: 20px;" class="form-control" id="txtohas" rows="3" placeholder="Orginal Text"></textarea>
+                  <div class="form-group">
+                      <select class="form-control" id="sha3v" style="background-color: #007BFF;color: #eeeeee;border:0 solid transparent;">
+                          <option value="1">SHA-3 : 512 (Rec)</option>
+                          <option value="2">SHA-3 : 384</option>
+                          <option value="3">SHA-3 : 256 (Rec)</option>
+                          <option value="4">SHA-3 : 224</option>
+                          <option value="5">SHA-2 : 512</option>
+                          <option value="6">SHA-2 : 256</option>
+                          <option value="7">SHA-1</option>
+                          <option value="8">RIPEMD-160</option>
+                          <option value="9">MD5</option>
+                      </select>
+                  </div>
+                  <button type="button" class="btn btn-success" id="btnhas" style="border-radius: 30px;padding: 6px 20px;">Hash</button>
+                  <span class="badge badge-dark btn-block" style="margin-top:15px;cursor: pointer;" id="c8">copy</span>
+                  <textarea class="form-control" style="height:100px;max-height: 300px;color:#eeeeee;background-color: #636e72;border:0;margin-bottom: 2px; " id="txtehas" rows="3" placeholder="Hash"></textarea>
+                  <button class="badge badge-dark" id="ehash" style="font-size: 14px;font-weight: bold;border: 0;">IS EQUAL ? </button>
+                  <textarea class="form-control" style="height:100px;max-height: 300px;color:#eeeeee;background-color: #636e72;border:0;margin-top: 2px; " id="txtehase" rows="3" placeholder="Hash"></textarea>
+                  <div style="width: 100%;height: 28px;background-color: #343a40;">
+                      <a href="http://8pass.ra8.ir/" target="_blank">
+                          <span class="badge badge-pill badge-dark" style="background-color: #1B1B1B;"  data-toggle="tooltip" data-placement="top" title="8PASS.RA8.IR">8PASS</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="ip" role="tabpanel" aria-labelledby="ip-tab">
+              <div style="width: 100%;padding: 25px;background-color: #343a40;padding-top: 30px">
+                  <button type="button" class="btn btn-success" id="btnip" style="border-radius: 30px;padding: 6px 20px;"><img src="img/sear.png" style="width: 85%;" /></button>
+                  <input type="text" style="margin-top:20px;margin-bottom:20px;background-color: #636e72;color: #eeeeee;border:0 solid transparent;" class="form-control" id="ipi" placeholder="Ip" title="Ip" disabled>
+                  <input type="text" style="margin-top:20px;margin-bottom:20px;background-color: #636e72;color: #eeeeee;border:0 solid transparent;" class="form-control" id="ipc" placeholder="Country" title="Country" disabled>
+                  <input type="text" style="margin-top:20px;margin-bottom:20px;background-color: #636e72;color: #eeeeee;border:0 solid transparent;" class="form-control" id="ipl" placeholder="Location" title="Location" disabled>
+                  <input type="text" style="margin-top:20px;margin-bottom:20px;background-color: #636e72;color: #eeeeee;border:0 solid transparent;" class="form-control" id="ipo" placeholder="Organization" title="Organization" disabled>
+              </div>
+              <div style="width: 100%;height: 28px;background-color: #343a40;">
+                  <a href="http://8pass.ra8.ir/" target="_blank">
+                      <span class="badge badge-pill badge-dark" style="background-color: #1B1B1B;"  data-toggle="tooltip" data-placement="top" title="8PASS.RA8.IR">8PASS</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </div>
+    <script src="crypto-js.min.js"></script>
+    <script src="popper.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="qrcode.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

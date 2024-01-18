@@ -1,0 +1,34 @@
+CACHE MANIFEST
+#This is a comment
+
+CACHE
+.htaccess
+index.html
+bootstrap.min.css
+popup.css
+qrcode.min.js
+popup.js
+popper.js
+jquery-3.3.1.min.js
+crypto-js.min.js
+bootstrap.min.js
+bootstrap.bundle.min.js
+site.webmanifest
+offline.manifest
+favicon-32x32.png
+favicon-16x16.png
+apple-touch-icon.png
+android-chrome-384x384.png
+android-chrome-192x192.png
+/img/bar8.png
+/img/bar9.png
+/img/key.png
+/img/Location.png
+/img/Lock.png
+/img/logo.gif
+/img/Password.png
+/img/Plus1.png
+/img/refresh-button.png
+/img/Scan.png
+/img/sear.png
+/img/Unlock.png
