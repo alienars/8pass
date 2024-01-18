@@ -2,12 +2,16 @@
   <span>8PASS | RA8</span>
   <br>
 </h1>
-<h1 style="flex">
+<p float="left">
+  <img src="readme/screenshot.png" alt="RA8-SCRT" width="45%">
+  <img src="readme/extension.png" alt="RA8-SCRT" width="45%">
+</p>
+<!-- <h1 style="flex">
   <br>
   <img float="left" src="readme/screenshot.png" alt="RA8-SCRT" width="50%">
   <img float="right" src="readme/extension.png" alt="RA8-SCRT" width="50%">
   <br>
-</h1>
+</h1> -->
 
 <p align="justify">
 Live Preview <a href="https://8pass.ra8.ir" title="8pass.ra8.ir">( 8pass.ra8.ir )</a>
