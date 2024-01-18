@@ -2,7 +2,7 @@
   <span>8PASS | RA8</span>
   <br>
 </h1>
-<h1>
+<h1 style="flex">
   <br>
   <img float="left" src="readme/screenshot.png" alt="RA8-SCRT" width="50%">
   <img float="right" src="readme/extension.png" alt="RA8-SCRT" width="50%">
