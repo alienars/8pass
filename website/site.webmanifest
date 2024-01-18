@@ -1,0 +1,20 @@
+{
+    "name": "8PASS",
+    "short_name": "8PASS",
+    "icons": [
+        {
+            "src": "/img/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/android-chrome-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#1b1b1b",
+    "background_color": "#1b1b1b",
+    "start_url": "https://8pass.ra8.ir",
+    "display": "standalone"
+}
